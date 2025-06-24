@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Canteen</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <!-- wrapper start -->
+    <div class="wrapper">
+    <div class="content">
+
+        <!-- Навбар -->
+        <section class="navbar">
+            <div class="container">
+                <div class="logo">
+                    <a href="index.html" title="Logo">
+                        <img src="images/10422720.png" alt="Devops Logo" class="img-responsive">
+                    </a>
+                </div>
+                <div class="menu text-right">
+                    <ul>
+                        <li><a href="index.html">Главное</a></li>
+                        <li><a href="categories.html">Категорий</a></li>
+                        <li><a href="foods.html">Еда</a></li>
+                        <li><a href="contact.html">Контакты</a></li>
+                    </ul>
+                </div>
+                <div class="clearfix"></div>
+            </div>
+        </section>
+
+        <!-- Поиск еды -->
+        <section class="food-search text-center">
+            <div class="container">
+                <h2>Блюда в категорий <a href="category-fastfood.html" class="text-white">"Фаст-Фуд"</a></h2>
+            </div>
+        </section>
+
+        <!-- Меню еды -->
+        <section class="food-menu">
+            <div class="container">
+               
+
+                <div class="food-menu-box">
+  <div class="food-menu-img" onclick="openModal('Донер', '₸970', '25г', '18г', '35г', 'images/doner.jpeg', 'Сочный донер в тонком лаваше с мясом, свежими овощами и соусом — идеальный выбор для сытного перекуса.')">
+    <img src="images/doner.jpeg" alt="Донер" class="img-responsive img-curve">
+  </div>
+  <div class="food-menu-desc">
+    <h4 onclick="openModal('Донер', '₸970', '25г', '18г', '35г', 'images/doner.jpeg', 'Сочный донер в тонком лаваше с мясом, свежими овощами и соусом — идеальный выбор для сытного перекуса.')">Донер</h4>
+    <p class="food-price">₸970</p>
+    <br>
+    <a href="order.html?dish=Донер" class="btn btn-primary">Заказать</a>
+  </div>
+</div>
+
+            <div class="food-menu-box">
+  <div class="food-menu-img" onclick="openModal('Сосиска в тесте', '₸250', '6г', '10г', '25г', 'images/sosiska.jpg', 'Пышное дрожжевое тесто и сочная сосиска — классика столовой, вкусно и сытно.')">
+    <img src="images/sosiska.jpg" alt="Сосиска в тесте" class="img-responsive img-curve">
+  </div>
+  <div class="food-menu-desc">
+    <h4 onclick="openModal('Сосиска в тесте', '₸250', '6г', '10г', '25г', 'images/sosiska.jpg', 'Пышное дрожжевое тесто и сочная сосиска — классика столовой, вкусно и сытно.')">Сосиска в тесте</h4>
+    <p class="food-price">₸250</p>
+    <br>
+    <a href="order.html?dish=Сосиска в тесте" class="btn btn-primary">Заказать</a>
+  </div>
+</div>
+
+            <div class="food-menu-box">
+  <div class="food-menu-img" onclick="openModal('Пирожок с картошкой', '₸170', '4г', '7г', '22г', 'images/piro.jpg', 'Ароматный пирожок с мягкой начинкой из картофеля — сытный и доступный перекус.')">
+    <img src="images/piro.jpg" alt="Пирожок с картошкой" class="img-responsive img-curve">
+  </div>
+  <div class="food-menu-desc">
+    <h4 onclick="openModal('Пирожок с картошкой', '₸170', '4г', '7г', '22г', 'images/piro.jpg', 'Ароматные пирожок с мягкой начинкой из картофеля — сытный и доступный перекус.')">Пирожок с картошкой</h4>
+    <p class="food-price">₸170</p>
+    <br>
+    <a href="order.html?dish=Пирожок с картошкой" class="btn btn-primary">Заказать</a>
+  </div>
+</div>
+
+            <div class="food-menu-box">
+  <div class="food-menu-img" onclick="openModal('Конверт с курицей', '₸550', '14г', '18г', '28г', 'images/konvert.jpg', 'Хрустящий слой теста с нежной куриной начинкой — отличное сочетание вкуса и сытности.')">
+    <img src="images/konvert.jpg" alt="Конверт с курицей" class="img-responsive img-curve">
+  </div>
+  <div class="food-menu-desc">
+    <h4 onclick="openModal('Конверт с курицей', '₸550', '14г', '18г', '28г', 'images/konvert.jpg', 'Хрустящий слой теста с нежной куриной начинкой — отличное сочетание вкуса и сытности.')">Конверт с курицей</h4>
+    <p class="food-price">₸550</p>
+    <br>
+    <a href="order.html?dish=Конверт с курицей" class="btn btn-primary">Заказать</a>
+  </div>
+</div>
+        
+                
+            </div>
+        </section>
+
+    </div> <!-- Закрываем .content -->
+<!-- script -->
+
+     <script>
+  function openModal(title, price, protein, fat, carb, imageSrc, description) {
+    document.getElementById("modal-title").innerText = title;
+    document.getElementById("modal-price").innerText = price;
+    document.getElementById("modal-protein").innerText = protein;
+    document.getElementById("modal-fat").innerText = fat;
+    document.getElementById("modal-carb").innerText = carb;
+    document.getElementById("modal-image").src = imageSrc;
+    document.getElementById("modal-description").innerText = description;
+    document.getElementById("modal").style.display = "flex";
+  }
+
+  function closeModal() {
+    document.getElementById("modal").style.display = "none";
+  }
+
+  window.onclick = function(event) {
+    const modal = document.getElementById("modal");
+    if (event.target === modal) {
+      closeModal();
+    }
+  };
+</script>
+
+<!-- Modal Window start here--> 
+
+    <div id="modal" class="modal">
+  <div class="modal-content">
+    <span class="close" onclick="closeModal()">&times;</span>
+    <img id="modal-image" src="" alt="Блюдо" class="modal-img">
+    <h2 id="modal-title">Название блюда</h2>
+    <p id="modal-price">Цена</p>
+    <p id="modal-description">Описание блюда</p>
+    <p><strong>БЖУ:</strong></p>
+    <ul>
+      <li><strong>Белки:</strong> <span id="modal-protein"></span></li>
+      <li><strong>Жиры:</strong> <span id="modal-fat"></span></li>
+      <li><strong>Углеводы:</strong> <span id="modal-carb"></span></li>
+    </ul>
+    <a href="order.html" class="btn btn-primary">Заказать</a>
+  </div>
+</div>
+
+
+<!-- Modal window end here-->
+
+    <!-- Подвал -->
+    <section class="footer">
+        <div class="container text-center">
+            <p>© 2025 Все права защищены. Столовая колледжа г. Семей</p>
+        </div>
+    </section>
+
+    </div> <!-- Закрываем .wrapper -->
+</body>
+</html>

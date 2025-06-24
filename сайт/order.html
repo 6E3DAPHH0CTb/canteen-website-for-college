@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Canteen</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <!-- Navbar -->
+    <section class="navbar">
+        <div class="container">
+            <div class="logo">
+                <a href="index.html" title="Logo">
+                    <img src="images/10422720.png" alt="Devops Logo" class="img-responsive"> 
+                </a>
+            </div>
+            <div class="menu text-right">
+                <ul>
+                    <li><a href="index.html">Главное</a></li>
+                    <li><a href="categories.html">Категорий</a></li>
+                    <li><a href="foods.html">Еда</a></li>
+                    <li><a href="contact.html">Контакты</a></li>
+                </ul>
+            </div>
+            <div class="clearfix"></div>
+        </div>
+    </section>
+
+    <!-- Order Section -->
+    <section class="order-search">
+        <div class="container">
+            <form action="" method="POST" class="order" onsubmit="showConfirmation(event)">
+                <fieldset>
+                    <legend class="form-legend">Пожалуйста, заполните форму для заказа</legend>
+                    <!-- Название блюда -->
+                    <div class="order-label text-white">Вы заказали</div>
+                    <select name="dish" id="ordered-dish" class="input-responsive" required>
+                        <option value="" disabled selected>Выберите блюдо</option>
+                        <option value="Овсяная Каша">Овсяная Каша</option>
+                        <option value="Рисовая Каша">Рисовая Каша</option>
+                        <option value="Молочная каша с вермишелью">Молочная каша с вермишелью</option>
+                        <option value="Донер">Донер</option>
+                        <option value="Сосиска в тесте">Сосиска в тесте</option>
+                        <option value="Пирожок с картошкой">Пирожок с картошкой</option>
+                        <option value="Конверт с курицей">Конверт с курицей</option>
+                        <option value="Вода без газа">Вода без газа</option>
+                        <option value="Вода с газом">Вода с газом</option>
+                        <option value="Coca-cola">Coca-cola</option>
+                        <option value="Fuse-tea">Fuse-tea</option>
+                        <option value="Чай с молоком">Чай с молоком</option>
+                        <option value="Чёрный чай">Чёрный чай</option>
+                        <option value="Компот">Компот</option>
+                        <option value="Зебра">Зебра</option>
+                        <option value="Тирамису">Тирамису</option>
+                    </select>
+
+                    <!-- Имя -->
+                    <div class="order-label text-white">Имя</div>
+                    <input 
+                        type="text" 
+                        name="full-name" 
+                        placeholder="Введите имя" 
+                        class="input-responsive" 
+                        required 
+                        maxlength="20"
+                        pattern="[A-Za-zА-Яа-яЁё\s]+"
+                        title="Только буквы (русские или английские), не более 20 символов"
+                    />
+
+                    <!-- Телефон -->
+                    <div class="order-label text-white">Номер телефона</div>
+                    <input 
+                        type="tel" 
+                        name="contact" 
+                        placeholder="Например: 87771234567" 
+                        class="input-responsive" 
+                        required 
+                        pattern="[0-9]{10,11}" 
+                        title="Введите только цифры, от 10 до 11 цифр"
+                    />
+
+                    <!-- Email -->
+                    <div class="order-label text-white">Электронная почта</div>
+                    <input 
+                        type="email" 
+                        name="email" 
+                        placeholder="example@gmail.com" 
+                        class="input-responsive" 
+                        required 
+                        pattern="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}"
+                        title="Введите корректную почту, например example@mail.com"
+                    />
+                    <!-- Кнопка отправки -->
+                    <input type="submit" name="submit" value="Оформить заказ" class="btn btn-primary">
+                </fieldset>
+            </form>
+        </div>
+    </section>
+
+     <!-- Footer -->
+    <section class="footer">
+        <div class="container text-center">
+            <p>© 2025 Все права защищены. Столовая колледжа г. Семей</p>
+        </div>
+    </section>
+
+<script>
+  function showConfirmation(e) {
+    e.preventDefault();
+
+    const modal = document.getElementById('confirmationModal');
+    const content = modal.querySelector('.modal-content-confirm');
+
+    modal.style.display = 'flex';
+    document.body.style.overflow = 'hidden';
+
+    // Удаляем старые классы и сбрасываем анимацию
+    content.classList.remove('fade-out');
+    void content.offsetWidth; // сброс анимации
+    content.classList.add('fade-in');
+
+    e.target.reset();
+
+    // Запускаем анимацию исчезновения
+    setTimeout(() => {
+      content.classList.remove('fade-in');
+      content.classList.add('fade-out');
+    }, 2500);
+
+    // Прячем окно после анимации
+    setTimeout(() => {
+      modal.style.display = 'none';
+      document.body.style.overflow = 'auto';
+    }, 3000);
+  }
+</script>
+
+
+
+
+<!-- Модальное окно подтверждения -->
+<div id="confirmationModal" class="modal-confirm">
+  <div class="modal-content-confirm">
+    <h3>Спасибо за заказ!</h3>
+    <p>Мы скоро свяжемся с вами для подтверждения 😊</p>
+  </div>
+</div>
+
+<script>
+  // Автоматически выбрать блюдо из параметра ?dish=...
+  const params = new URLSearchParams(window.location.search);
+  const selectedDish = params.get("dish");
+
+  if (selectedDish) {
+    const select = document.getElementById("ordered-dish");
+    if (select) {
+      for (const option of select.options) {
+        if (option.value === selectedDish) {
+          option.selected = true;
+          break;
+        }
+      }
+    }
+  }
+</script>
+
+
+
+
+
+</body>
+</html>
