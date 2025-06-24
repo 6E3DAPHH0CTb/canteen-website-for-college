@@ -1,0 +1,413 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <!-- Import to make website responsive-->
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Canteen</title>
+
+    <!-- Link css file-->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <!-- Navbar Starts here-->
+    <section class="navbar">
+        <div class="container">
+            <div class="logo">
+                <a href="index.html" title="Logo">
+                <img src="images/10422720.png" alt="Devops Logo" class="img-responsive"> 
+            </a>
+            </div>
+            <div class="menu text-right">
+                <ul>
+                    <li>
+                        <a href="index.html">Главное</a>
+                    </li>
+                    <li>
+                        <a href="categories.html">Категорий</a>
+                    </li>
+                    
+                    <li>
+                        <a href="foods.html">Еда</a>
+                    </li>
+                    <li>
+                        <a href="contact.html">Контакты</a>
+                    </li>
+                </ul>
+                
+            </div>
+            <div class="clearfix"></div>
+        </div>
+        
+       
+
+    </section>
+    <!-- Navbar ends here-->
+
+    <!-- Food search section Starts here-->
+    <section class="food-search text-center">
+    <div class="container">
+        <form action="#" method="POST" style="position: relative;">
+  <input type="text" id="searchInput" placeholder="Поиск блюд..." class="input-responsive" autocomplete="off">
+  <div id="suggestions" class="suggestions-box"></div>
+</form>
+
+    </div> <!-- Закрытие контейнера -->
+</section>
+    <!-- Food search section ends here-->
+
+    <!-- food menu section Starts here-->
+    <section class="food-menu">
+        
+            <h2 class="text-center">Ассортимент столовой</h2>
+            <div class="container">
+        
+            <div class="food-menu-box">
+  <div class="food-menu-img" onclick="openModal('Овсяная Каша', '₸200', '3г', '2г', '15г', 'images/ovsyanaya.jpg', 'Полезная и сытная овсяная каша на молоке.')">
+    <img src="images/ovsyanaya.jpg" alt="Овсяная каша" class="img-responsive img-curve">
+  </div>
+  <div class="food-menu-desc">
+    <h4 onclick="openModal('Овсяная Каша', '₸200', '3г', '2г', '15г', 'images/ovsyanaya.jpg', 'Полезная и сытная овсяная каша на молоке.')">Овсяная Каша</h4>
+    <p class="food-price">₸200</p>
+    <br>
+    <a href="order.html?dish=Овсяная Каша" class="btn btn-primary">Заказать</a>
+  </div>
+</div>
+
+
+
+
+            <div class="food-menu-box">
+  <div class="food-menu-img" onclick="openModal('Рисовая Каша', '₸220', '2г', '3г', '18г', 'images/risovaya.jpg', 'Нежная рисовая каша на молоке, идеально подходит для завтрака.')">
+    <img src="images/risovaya.jpg" alt="Рисовая каша" class="img-responsive img-curve">
+  </div>
+  <div class="food-menu-desc">
+    <h4 onclick="openModal('Рисовая Каша', '₸220', '2г', '3г', '18г', 'images/risovaya.jpg', 'Нежная рисовая каша на молоке, идеально подходит для завтрака.')">Рисовая Каша</h4>
+    <p class="food-price">₸220</p>
+    <br>
+    <a href="order.html?dish=Рисовая Каша" class="btn btn-primary">Заказать</a>
+  </div>
+</div>
+
+
+            <div class="food-menu-box">
+  <div class="food-menu-img" onclick="openModal('Молочная каша с вермишелью', '₸210', '3г', '4г', '17г', 'images/molochnaya.jpg', 'Домашняя молочная каша с вермишелью — нежное блюдо, знакомое с детства.')">
+    <img src="images/molochnaya.jpg" alt="Молочная каша с вермишелью" class="img-responsive img-curve">
+  </div>
+  <div class="food-menu-desc">
+    <h4 onclick="openModal('Молочная каша с вермишелью', '₸210', '3г', '4г', '17г', 'images/molochnaya.jpg', 'Домашняя молочная каша с вермишелью — нежное блюдо, знакомое с детства.')">Молочная каша с вермишелью</h4>
+    <p class="food-price">₸210</p>
+    <br>
+    <a href="order.html?dish=Молочная каша с вермишелью" class="btn btn-primary">Заказать</a>
+  </div>
+</div>
+
+
+            <div class="food-menu-box">
+  <div class="food-menu-img" onclick="openModal('Донер', '₸970', '25г', '18г', '35г', 'images/doner.jpeg', 'Сочный донер в тонком лаваше с мясом, свежими овощами и соусом — идеальный выбор для сытного перекуса.')">
+    <img src="images/doner.jpeg" alt="Донер" class="img-responsive img-curve">
+  </div>
+  <div class="food-menu-desc">
+    <h4 onclick="openModal('Донер', '₸970', '25г', '18г', '35г', 'images/doner.jpeg', 'Сочный донер в тонком лаваше с мясом, свежими овощами и соусом — идеальный выбор для сытного перекуса.')">Донер</h4>
+    <p class="food-price">₸970</p>
+    <br>
+    <a href="order.html?dish=Донер" class="btn btn-primary">Заказать</a>
+  </div>
+</div>
+
+
+            <div class="food-menu-box">
+  <div class="food-menu-img" onclick="openModal('Сосиска в тесте', '₸250', '6г', '10г', '25г', 'images/sosiska.jpg', 'Пышное дрожжевое тесто и сочная сосиска — классика столовой, вкусно и сытно.')">
+    <img src="images/sosiska.jpg" alt="Сосиска в тесте" class="img-responsive img-curve">
+  </div>
+  <div class="food-menu-desc">
+    <h4 onclick="openModal('Сосиска в тесте', '₸250', '6г', '10г', '25г', 'images/sosiska.jpg', 'Пышное дрожжевое тесто и сочная сосиска — классика столовой, вкусно и сытно.')">Сосиска в тесте</h4>
+    <p class="food-price">₸250</p>
+    <br>
+    <a href="order.html?dish=Сосиска в тесте" class="btn btn-primary">Заказать</a>
+  </div>
+</div>
+
+
+            <div class="food-menu-box">
+  <div class="food-menu-img" onclick="openModal('Пирожок с картошкой', '₸170', '4г', '7г', '22г', 'images/piro.jpg', 'Ароматный пирожок с мягкой начинкой из картофеля — сытный и доступный перекус.')">
+    <img src="images/piro.jpg" alt="Пирожок с картошкой" class="img-responsive img-curve">
+  </div>
+  <div class="food-menu-desc">
+    <h4 onclick="openModal('Пирожок с картошкой', '₸170', '4г', '7г', '22г', 'images/piro.jpg', 'Ароматный пирожок с мягкой начинкой из картофеля — сытный и доступный перекус.')">Пирожок с картошкой</h4>
+    <p class="food-price">₸170</p>
+    <br>
+    <a href="order.html?dish=Пирожок с картошкой" class="btn btn-primary">Заказать</a>
+  </div>
+</div>
+
+
+            <div class="food-menu-box">
+  <div class="food-menu-img" onclick="openModal('Конверт с курицей', '₸550', '14г', '18г', '28г', 'images/konvert.jpg', 'Хрустящий слой теста с нежной куриной начинкой — отличное сочетание вкуса и сытности.')">
+    <img src="images/konvert.jpg" alt="Конверт с курицей" class="img-responsive img-curve">
+  </div>
+  <div class="food-menu-desc">
+    <h4 onclick="openModal('Конверт с курицей', '₸550', '14г', '18г', '28г', 'images/konvert.jpg', 'Хрустящий слой теста с нежной куриной начинкой — отличное сочетание вкуса и сытности.')">Конверт с курицей</h4>
+    <p class="food-price">₸550</p>
+    <br>
+    <a href="order.html?dish=Конверт с курицей" class="btn btn-primary">Заказать</a>
+  </div>
+</div>
+
+
+            <div class="food-menu-box">
+  <div class="food-menu-img" onclick="openModal('Вода без газа', '₸280', '0г', '0г', '0г', 'images/bonaaquabezgaz.jpg', 'Освежающая питьевая вода без газа — необходима для поддержания водного баланса.')">
+    <img src="images/bonaaquabezgaz.jpg" alt="Вода без газа" class="img-responsive img-curve">
+  </div>
+  <div class="food-menu-desc">
+    <h4 onclick="openModal('Вода без газа', '₸280', '0г', '0г', '0г', 'images/bonaaquabezgaz.jpg', 'Освежающая питьевая вода без газа — необходима для поддержания водного баланса.')">Вода без газа</h4>
+    <p class="food-price">₸280</p>
+    <br>
+    <a href="order.html?dish=Вода без газа" class="btn btn-primary">Заказать</a>
+  </div>
+</div>
+
+
+            <div class="food-menu-box">
+  <div class="food-menu-img" onclick="openModal('Вода с газом', '₸280', '0г', '0г', '0г', 'images/bonaquagaz.jpg', 'Освежающая минеральная вода с газом. Отличный выбор для утоления жажды.')">
+    <img src="images/bonaquagaz.jpg" alt="Вода с газом" class="img-responsive img-curve">
+  </div>
+  <div class="food-menu-desc">
+    <h4 onclick="openModal('Вода с газом', '₸280', '0г', '0г', '0г', 'images/bonaquagaz.jpg', 'Освежающая минеральная вода с газом. Отличный выбор для утоления жажды.')">Вода с газом</h4>
+    <p class="food-price">₸280</p>
+    <br>
+    <a href="order.html?dish=Вода с газом" class="btn btn-primary">Заказать</a>
+  </div>
+</div>
+
+
+            <div class="food-menu-box">
+  <div class="food-menu-img" onclick="openModal('Coca-cola', '₸510', '0г', '0г', '10.6г', 'images/coca.jpg', 'Газированный сладкий напиток Coca-Cola. Освежает и бодрит, содержит сахар.')">
+    <img src="images/coca.jpg" alt="Coca-cola" class="img-responsive img-curve">
+  </div>
+  <div class="food-menu-desc">
+    <h4 onclick="openModal('Coca-cola', '₸510', '0г', '0г', '10.6г', 'images/coca.jpg', 'Газированный сладкий напиток Coca-Cola. Освежает и бодрит, содержит сахар.')">Coca-cola</h4>
+    <p class="food-price">₸510</p>
+    <br>
+    <a href="order.html?dish=Coca-cola" class="btn btn-primary">Заказать</a>
+  </div>
+</div>
+
+
+            <div class="food-menu-box">
+  <div class="food-menu-img" onclick="openModal('Fuse-tea', '₸410', '0г', '0г', '8г', 'images/fuse.jpg', 'Охлаждённый чайный напиток Fuse-tea с лёгким фруктовым вкусом. Отлично утоляет жажду.')">
+    <img src="images/fuse.jpg" alt="Fuse-tea" class="img-responsive img-curve">
+  </div>
+  <div class="food-menu-desc">
+    <h4 onclick="openModal('Fuse-tea', '₸410', '0г', '0г', '8г', 'images/fuse.jpg', 'Охлаждённый чайный напиток Fuse-tea с лёгким фруктовым вкусом. Отлично утоляет жажду.')">Fuse-tea</h4>
+    <p class="food-price">₸410</p>
+    <br>
+    <a href="order.html?dish=Fuse-tea" class="btn btn-primary">Заказать</a>
+  </div>
+</div>
+
+
+            <div class="food-menu-box">
+  <div class="food-menu-img" onclick="openModal('Чай с молоком', '₸170', '1г', '2г', '6г', 'images/chaismolokom.jpg', 'Классический чёрный чай с добавлением молока. Мягкий вкус и лёгкая сладость.')">
+    <img src="images/chaismolokom.jpg" alt="Чай с молоком" class="img-responsive img-curve">
+  </div>
+  <div class="food-menu-desc">
+    <h4 onclick="openModal('Чай с молоком', '₸170', '1г', '2г', '6г', 'images/chaismolokom.jpg', 'Классический чёрный чай с добавлением молока. Мягкий вкус и лёгкая сладость.')">Чай с молоком</h4>
+    <p class="food-price">₸170</p>
+    <br>
+    <a href="order.html?dish=Чай с молоком" class="btn btn-primary">Заказать</a>
+  </div>
+</div>
+
+
+            <div class="food-menu-box">
+  <div class="food-menu-img" onclick="openModal('Чёрный чай', '₸130', '0г', '0г', '0г', 'images/chaicherni.jpg', 'Классический горячий чёрный чай без добавок. Бодрит и согревает.')">
+    <img src="images/chaicherni.jpg" alt="Чёрный чай" class="img-responsive img-curve">
+  </div>
+  <div class="food-menu-desc">
+    <h4 onclick="openModal('Чёрный чай', '₸130', '0г', '0г', '0г', 'images/chaicherni.jpg', 'Классический горячий чёрный чай без добавок. Бодрит и согревает.')">Чёрный чай</h4>
+    <p class="food-price">₸130</p>
+    <br>
+    <a href="order.html?dish=Чёрный чай" class="btn btn-primary">Заказать</a>
+  </div>
+</div>
+
+
+            <div class="food-menu-box">
+  <div class="food-menu-img" onclick="openModal('Компот', '₸190', '0г', '0г', '12г', 'images/kompot.jpg', 'Освежающий фруктовый компот, сваренный из натуральных ягод и сухофруктов.')">
+    <img src="images/kompot.jpg" alt="Компот" class="img-responsive img-curve">
+  </div>
+  <div class="food-menu-desc">
+    <h4 onclick="openModal('Компот', '₸190', '0г', '0г', '12г', 'images/kompot.jpg', 'Освежающий фруктовый компот, сваренный из натуральных ягод и сухофруктов.')">Компот</h4>
+    <p class="food-price">₸190</p>
+    <br>
+    <a href="order.html?dish=Компот" class="btn btn-primary">Заказать</a>
+  </div>
+</div>
+
+
+            <div class="food-menu-box">
+  <div class="food-menu-img" onclick="openModal('Зебра', '₸170', '5г', '10г', '30г', 'images/zebra.jpg', 'Вафельный батончик «Зебра» с молочным шоколадом, арахисом и изюмом — нежно, хрустяще и вкусно.')">
+    <img src="images/zebra.jpg" alt="Зебра" class="img-responsive img-curve">
+  </div>
+  <div class="food-menu-desc">
+    <h4 onclick="openModal('Зебра', '₸170', '5г', '10г', '30г', 'images/zebra.jpg', 'Вафельный батончик «Зебра» с молочным шоколадом, арахисом и изюмом — нежно, хрустяще и вкусно.')">Зебра</h4>
+    <p class="food-price">₸170</p>
+    <br>
+    <a href="order.html?dish=Зебра" class="btn btn-primary">Заказать</a>
+  </div>
+</div>
+
+
+
+            <div class="food-menu-box">
+  <div class="food-menu-img" onclick="openModal('Тирамису', '₸490', '5г', '16г', '28г', 'images/tiramisu.jpg', 'Нежный десерт на основе сыра маскарпоне, бисквитов и кофе с лёгким ароматом какао.')">
+    <img src="images/tiramisu.jpg" alt="Тирамису" class="img-responsive img-curve">
+  </div>
+  <div class="food-menu-desc">
+    <h4 onclick="openModal('Тирамису', '₸490', '5г', '16г', '28г', 'images/tiramisu.jpg', 'Нежный десерт на основе сыра маскарпоне, бисквитов и кофе с лёгким ароматом какао.')">Тирамису</h4>
+    <p class="food-price">₸490</p>
+    <br>
+    <a href="order.html?dish=Тирамису" class="btn btn-primary">Заказать</a>
+  </div>
+</div>
+
+
+           <div class="clearfix"></div>
+            
+        </div>
+    </section>
+    <!-- food menu section ends here-->   
+
+     <!-- footer section Starts here-->
+    <section class="footer">
+    <div class="container text-center">
+        <p>© 2025 Все права защищены. Столовая колледжа г. Семей</p>
+    </div>
+</section>
+
+    </section>
+    <!-- footer section ends here-->
+
+    <!-- script -->
+
+     <script>
+  function openModal(title, price, protein, fat, carb, imageSrc, description) {
+    document.getElementById("modal-title").innerText = title;
+    document.getElementById("modal-price").innerText = price;
+    document.getElementById("modal-protein").innerText = protein;
+    document.getElementById("modal-fat").innerText = fat;
+    document.getElementById("modal-carb").innerText = carb;
+    document.getElementById("modal-image").src = imageSrc;
+    document.getElementById("modal-description").innerText = description;
+    document.getElementById("modal").style.display = "flex";
+  }
+
+  function closeModal() {
+    document.getElementById("modal").style.display = "none";
+  }
+
+  window.onclick = function(event) {
+    const modal = document.getElementById("modal");
+    if (event.target === modal) {
+      closeModal();
+    }
+  };
+</script>
+
+
+    <!-- script end -->
+
+<!-- Modal Window start here--> 
+
+    <div id="modal" class="modal">
+  <div class="modal-content">
+    <span class="close" onclick="closeModal()">&times;</span>
+    <img id="modal-image" src="" alt="Блюдо" class="modal-img">
+    <h2 id="modal-title">Название блюда</h2>
+    <p id="modal-price">Цена</p>
+    <p id="modal-description">Описание блюда</p>
+    <p><strong>БЖУ:</strong></p>
+    <ul>
+      <li><strong>Белки:</strong> <span id="modal-protein"></span></li>
+      <li><strong>Жиры:</strong> <span id="modal-fat"></span></li>
+      <li><strong>Углеводы:</strong> <span id="modal-carb"></span></li>
+    </ul>
+    <a href="order.html" class="btn btn-primary">Заказать</a>
+  </div>
+</div>
+
+
+<!-- Modal window end here-->
+
+<!-- script for search -->
+
+<script>
+  document.getElementById("searchInput").addEventListener("input", function () {
+    const searchValue = this.value.toLowerCase();
+    const cards = document.querySelectorAll(".food-menu-box");
+
+    cards.forEach(card => {
+      const title = card.querySelector("h4").textContent.toLowerCase();
+      if (title.includes(searchValue)) {
+        card.style.display = "";
+      } else {
+        card.style.display = "none";
+      }
+    });
+  });
+</script>
+
+<!-- script for search end -->
+
+<script>
+  const foodNames = [
+    "Овсяная Каша", "Рисовая Каша", "Молочная каша с вермишелью", "Донер",
+    "Сосиска в тесте", "Пирожок с картошкой", "Конверт с курицей",
+    "Вода без газа", "Вода с газом", "Coca-cola", "Fuse-tea",
+    "Чай с молоком", "Чёрный чай", "Компот", "Зебра", "Тирамису"
+  ];
+
+  const input = document.getElementById('searchInput');
+  const suggestionsBox = document.getElementById('suggestions');
+
+  input.addEventListener('input', function () {
+    const value = this.value.toLowerCase();
+    suggestionsBox.innerHTML = '';
+
+    if (value.length === 0) {
+      suggestionsBox.style.display = 'none';
+      return;
+    }
+
+    const filtered = foodNames.filter(name => name.toLowerCase().includes(value));
+
+    filtered.forEach(name => {
+      const div = document.createElement('div');
+      div.textContent = name;
+      div.classList.add('suggestion-item');
+      div.onclick = () => {
+      input.value = name;
+      suggestionsBox.innerHTML = '';
+      suggestionsBox.style.display = 'none';
+  input.dispatchEvent(new Event('input'));
+};
+
+      suggestionsBox.appendChild(div);
+    });
+
+    suggestionsBox.style.display = filtered.length > 0 ? 'block' : 'none';
+  });
+
+  document.addEventListener('click', (e) => {
+    if (!suggestionsBox.contains(e.target) && e.target !== input) {
+      suggestionsBox.innerHTML = '';
+      suggestionsBox.style.display = 'none';
+    }
+  });
+</script>
+
+</body>
+</html>

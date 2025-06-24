@@ -1,0 +1,668 @@
+
+
+/* CSS for all*/
+* {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.container{
+    
+    width: 80%;
+    margin: 0 auto;
+    padding: 1%;
+
+}
+.img-responsive{
+    width: 100%;
+}
+.img-curve{
+    border-radius: 15px;
+}
+.text-right{
+    text-align: right;
+}
+.text-center{
+    text-align: center;
+}
+.text-white {
+    color: rgb(255, 255, 255);
+    text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.9);
+}
+.clearfix{
+    clear: both;
+    float: none;
+}
+a{
+    color: #ff4757;
+    text-decoration: none;
+}
+a:hover{
+    color: #eb2f06;
+}
+.btn{
+    padding: 1%;
+    border: none;
+    font-size: 1rem;
+    border-radius: 5px;
+}
+.btn-primary{
+    background-color: #ff4757;
+    color: white;
+    cursor: pointer;
+}
+.btn-primary:hover{
+    background-color: #eb2f06;
+    color: white;
+}
+h2{
+    color: #ffffff;
+    text-shadow: 2px 2px 6px rgba(0, 0, 0, 1);
+    font-size: 2.5rem;
+    margin-bottom: 2%;
+    font-weight: 600;
+}
+h3{
+    font-size: 1.5rem;
+    color: white;
+    font-weight: bold;
+    text-shadow: 1px 1px 3px black;
+    text-align: center;
+}
+.float-container{
+    position: relative;
+    
+}
+.float-text{
+    position: absolute;
+    bottom: 50px;
+    left: 40%;
+}
+fieldset{
+    border: 1px solid white;
+    margin: 5%;
+    padding: 3%;
+    border-radius: 5px;
+}
+/*CSS for navbar section*/
+/* Общий контейнер навигации */
+.navbar .container {
+    display: flex;
+    align-items: center; /* выравнивание по вертикали */
+    justify-content: space-between; /* пробел между логотипом и меню */
+    padding: 10px 20px;
+}
+
+/* Логотип */
+.navbar .logo img {
+    max-height: 75px; /* размер логотипа */
+    width: auto;
+}
+
+/* Меню */
+.navbar .menu ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    gap: 20px; /* расстояние между пунктами */
+}
+
+.navbar .menu ul li a {
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+}
+/* Обертка контейнера в навбаре */
+.navbar .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between; /* <-- ключевой момент */
+}
+
+/* Меню уходит вправо */
+.navbar .menu {
+    margin-left: auto;
+}
+
+/* CSS for food search section*/
+.food-search{
+    background-image: url(../images/bga.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    padding: 15% 0;
+}
+.food-search input[type="search"] {
+    width: 50%;
+    padding: 1%;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-bottom: 0; /* убрать отступ вниз */
+    position: relative;
+    z-index: 1001;
+}
+
+/*CSS for Categories */
+.categories{
+    padding: 4% 0;
+}
+.box-3{
+    
+    width: 28%;
+    float: left;
+    margin: 2%;
+}
+/*CSS for food menu */
+
+.food-menu{
+    background-color: #ececec;
+    padding: 4% 0;
+}
+
+.food-price{
+    font-size: 1.2rem;
+    margin: 1% 0;
+}
+
+.food-detail{
+    font-size: 1rem;
+    color: #747d8c;
+}
+/* CSS for Social*/
+.social ul{
+    list-style-type: none;
+}
+
+.social ul li{
+    display: inline;
+    padding: 1%;
+}
+
+/*CSS for order section */
+
+.order {
+    color: white;
+    background-color: rgba(0, 0, 0, 0.5); /* полупрозрачный фон формы */
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+    width: 50%;
+    margin: 0 auto;
+}
+
+.order-search{
+    background-image: url(../images/bga.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    padding: 15% 0;
+}
+.input-responsive {
+  width: 100%; 
+  padding: 10px;
+  margin-bottom: 20px;
+  border: none;
+  border-radius: 5px 5px 0 0;
+  font-size: 1rem;
+  box-sizing: border-box;
+}
+
+
+.order-label {
+    margin-bottom: 8px;         /* Сделает расстояние между текстом и инпутом больше */
+    font-weight: bold;
+    display: block;             /* Чтобы надпись не стояла в одну линию с полем */
+}
+
+
+/* CSS for Mobile version */
+@media only screen and (max-width:768px){
+    .logo{
+        width: 50%;
+        float: none;
+        margin: 1% auto;
+    }
+ 
+    .menu ul{
+        text-align: center;
+    }
+
+/* поиск */
+
+    #searchInput {
+    width: 90%;
+    padding: 2%;
+    margin-bottom: 0; /* Убираем лишний отступ */
+    border: 1px solid #ccc;
+    font-size: 16px;
+}
+
+    .btn{
+        width: 91%;
+        padding: 2%;
+    }
+    .food-search{
+        padding: 10%;
+    }
+    .categories{
+        padding: 20% 0;
+    }
+    h2{
+        margin-bottom: 10%;
+    }
+    .box-3{
+        width: 90%;
+        margin: 4% auto;
+    }
+    .food-menu{
+        padding: 20% 0;
+    }
+    .food-menu-box{
+        width: 90%;
+        padding: 5%;
+        margin-bottom: 5%;
+    }
+    .social{
+        padding: 5% 0;
+    }
+    .order{
+        width: 100%;
+    }
+}
+
+html, body {
+    height: 100%;
+}
+
+.wrapper {
+    min-height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.content {
+    flex: 1;
+}
+.food-menu-box {
+    border: 1px solid #ccc;         /* светло-серая рамка */
+    padding: 15px;                  /* внутренние отступы */
+    margin-bottom: 20px;            /* отступ между блюдами */
+    border-radius: 10px;            /* скруглённые углы */
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1); /* лёгкая тень */
+    background-color: #fff;         /* белый фон */
+    display: flex;                  /* для горизонтального расположения изображения и описания */
+    align-items: center;
+}
+.food-menu-img img {
+    width: 120px;       /* или 150px, подбери под дизайн */
+    height: 120px;
+    object-fit: cover;  /* чтобы обрезалось, а не сжималось */
+    border-radius: 8px; /* скругление по желанию */
+}
+.modal {
+  position: fixed;
+  z-index: 1000;
+  left: 0; top: 0;
+  width: 100%; height: 100%;
+  display: none;
+  background-color: rgba(0,0,0,0.7);
+  justify-content: center;
+  align-items: center;
+}
+
+.modal-content {
+  background-color: #fff;
+  padding: 20px 30px;
+  border-radius: 10px;
+  text-align: left;
+  max-width: 400px;
+  width: 90%;
+  color: black;
+}
+
+.close {
+  position: absolute;
+  top: 20px;
+  right: 38px;
+  font-size: 28px;
+  font-weight: bold;
+  cursor: pointer;
+  color: black;
+}
+.header-bg {
+    background-image: url("../images/bga.png"); 
+    background-size: cover;
+    background-position: center;
+    height: 50vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.header-bg h2 {
+    color: white;
+    font-size: 3rem;
+    text-shadow: 2px 2px 5px rgba(0,0,0,0.7);
+}
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 999;
+  padding-top: 60px;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0,0,0,0.6);
+}
+
+.modal-content {
+  background-color: #fff;
+  margin: auto;
+  padding: 20px;
+  border-radius: 12px;
+  width: 90%;
+  max-width: 400px;
+  animation: fadeIn 0.3s ease-in-out;
+  position: relative;
+  text-align: center;
+}
+
+.modal-img {
+  width: 100%;
+  border-radius: 12px;
+  margin-bottom: 10px;
+}
+
+.close {
+  color: #aaa;
+  position: absolute;
+  top: 15px;
+  right: 38px;
+  font-size: 26px;
+  font-weight: bold;
+  cursor: pointer;
+  z-index: 10;
+}
+
+
+.close:hover {
+  color: red;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(-10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+.modal-content {
+  max-width: 500px;
+  padding: 20px;
+  background: #fff;
+  margin: 100px auto;
+  border-radius: 15px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+  animation: fadeIn 0.3s ease;
+}
+
+.modal-img {
+  width: 100%;
+  border-radius: 10px;
+  margin-bottom: 15px;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: scale(0.95); }
+  to { opacity: 1; transform: scale(1); }
+}
+/* Modal styles */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 9999;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0,0,0,0.6);
+  justify-content: center;
+  align-items: center;
+  animation: fadeIn 0.3s ease-in-out;
+}
+
+.modal-content {
+  background-color: #fff;
+  padding: 25px;
+  border-radius: 15px;
+  text-align: center;
+  position: relative;
+  max-width: 400px;
+  width: 90%;
+  box-shadow: 0 0 20px rgba(0,0,0,0.3);
+  animation: slideUp 0.3s ease-in-out;
+}
+
+.modal-img {
+  width: 100%;
+  max-height: 120px;
+  object-fit: cover;
+  border-radius: 10px;
+  margin-bottom: 15px;
+}
+
+.close {
+  position: absolute;
+  top: 3px;
+  right: 10px;
+  font-size: 28px;
+  color: #888;
+  cursor: pointer;
+  z-index: 10;
+}
+
+.close:hover {
+  color: #000;
+}
+
+/* Hover effect on dish name */
+.food-menu-desc h4 {
+  transition: transform 0.3s;
+  cursor: pointer;
+}
+
+.food-menu-desc h4:hover {
+  transform: translateY(-3px);
+  color: #d35400;
+  cursor: pointer;
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes slideUp {
+  from { transform: translateY(20px); opacity: 0; }
+  to { transform: translateY(0); opacity: 1; }
+}
+.food-menu .container {
+  display: grid;
+  grid-template-columns: 1fr 1fr; /* две колонки */
+  gap: 20px;
+  justify-items: center;
+}
+
+.food-menu-box {
+  display: flex;
+  flex-direction: row;
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  padding: 15px;
+  width: 100%;
+  max-width: 600px;
+  align-items: center;
+  gap: 15px;
+}
+
+.food-menu-img {
+  flex: 0 0 120px;
+}
+
+.food-menu-img img {
+  width: 120px;
+  height: 120px;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+.food-menu-desc {
+  flex: 1;
+}
+
+.food-menu-desc h4 {
+  margin: 0 0 10px;
+}
+
+.food-price {
+  margin: 5px 0;
+  font-weight: bold;
+}
+.modal-content ul {
+  margin-bottom: 1px;
+}
+
+.modal-content .btn {
+  display: inline-block;
+  margin-top: 1px;
+}
+.show-more {
+  margin-top: 2px; /* регулируй отступ вниз */
+}
+
+
+
+.suggestions-box {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  background: white;
+  border: 1px solid #ccc;
+  border-top: none;
+  z-index: 1;
+  max-height: 200px;
+  overflow-y: auto;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  border-radius: 0 0 5px 5px;
+  font-size: 16px;
+}
+
+.suggestions-box div {
+  padding: 10px 15px;
+  text-align: left;
+  cursor: pointer; /* добавляет "пальчик" */
+  color: #333;
+  transition: background-color 0.2s ease;
+}
+
+.suggestions-box div:hover {
+  background-color: #f1f1f1;
+}
+
+form {
+  margin: 0;
+  padding: 0;
+}
+
+#searchInput {
+  margin: 0;
+  padding: 10px;
+  box-sizing: border-box;
+  border: 1px solid #ccc;
+  border-radius: 5px 5px 0 0;
+  position: relative;
+  z-index: 2;
+}
+
+.suggestions-box {
+  margin: 0;
+  padding: 0;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  background: white;
+  border: 1px solid #ccc;
+  border-top: none;
+  z-index: 1;
+  max-height: 200px;
+  overflow-y: auto;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  border-radius: 0 0 5px 5px;
+}
+
+.modal-confirm {
+  display: none;
+  position: fixed;
+  z-index: 10000;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0,0,0,0.6);
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+
+.modal-content-confirm {
+  background: white;
+  padding: 30px;
+  border-radius: 12px;
+  text-align: center;
+  max-width: 350px;
+  width: 90%;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+  transform: scale(0.9);
+  opacity: 0;
+}
+
+/* Анимации */
+@keyframes fadeInZoom {
+  from {
+    opacity: 0;
+    transform: scale(0.9);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes fadeOutZoom {
+  from {
+    opacity: 1;
+    transform: scale(1);
+  }
+  to {
+    opacity: 0;
+    transform: scale(0.9);
+  }
+}
+
+/* Активация анимаций через классы */
+.modal-content-confirm.fade-in {
+  animation: fadeInZoom 0.4s ease forwards;
+}
+
+.modal-content-confirm.fade-out {
+  animation: fadeOutZoom 0.4s ease forwards;
+}
+
+
