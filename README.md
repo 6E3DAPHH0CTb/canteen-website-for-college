@@ -1,0 +1,1 @@
+hi, this is my first website made in a couple of days. This website is made for my college thesis project. I used 3 programming languages: HTML, CSS, and JAVASCRIPT. Whoever finds this, I wish you good luck and a happy life. hello from kazakhstan
