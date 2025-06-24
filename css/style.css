@@ -666,3 +666,78 @@ form {
 }
 
 
+@media (max-width: 768px) {
+  .navbar .container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .navbar .menu ul {
+    flex-direction: column;
+    gap: 10px;
+    padding-top: 10px;
+  }
+
+  .food-menu .container {
+    grid-template-columns: 1fr; /* одна колонка на мобилке */
+    padding: 0 10px;
+  }
+
+  .food-menu-box {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .food-menu-img {
+    width: 100%;
+    max-width: 200px;
+    margin: 0 auto 15px;
+  }
+
+  .food-menu-img img {
+    width: 100%;
+    height: auto;
+  }
+
+  .food-menu-desc {
+    width: 100%;
+  }
+
+  .order {
+    width: 90%;
+    padding: 20px;
+  }
+
+  .header-bg h2 {
+    font-size: 2rem;
+    text-align: center;
+    padding: 0 10px;
+  }
+
+  .btn, .input-responsive {
+    width: 100%;
+    box-sizing: border-box;
+  }
+
+  .modal-content {
+    width: 95%;
+    padding: 15px;
+  }
+
+  h2 {
+    font-size: 1.8rem;
+  }
+
+  h3 {
+    font-size: 1.2rem;
+  }
+
+  .categories {
+    padding: 10% 0;
+  }
+
+  .box-3 {
+    width: 90%;
+    margin: 5% auto;
+  }
+}
